@@ -1,22 +1,43 @@
-# Gallstone Classification: A Fair Model Comparison
+# Gallstone Disease Classification
 
-By Zenith Anthony Dabarera. SIT720 Machine Learning coursework.
+Compare an interpretable linear classifier with a tree ensemble and inspect the types of errors they make.
 
-Gallstone disease classification and model comparison.
+**Python · scikit-learn · Logistic Regression · Random Forest**
 
-## Files
+## Project at a glance
+
+For the recorded 70:30 split, Logistic Regression has test ROC-AUC 0.8142 and accuracy 0.7292; Random Forest has ROC-AUC 0.7361. A separate 80:20 experiment is included. These are exploratory comparisons, not clinical validation.
+
+## Technical work
+
+- Missing-value handling and mixed-feature preprocessing
+- Stratified splitting and cross-validation
+- Hyperparameter search and train–validation gap analysis
+- Confusion matrices, sensitivity to split ratio and feature analysis
+
+## Explore the evidence
 
 - [SIT720_6_2C_Gallstone_Classification_FINAL.ipynb](SIT720_6_2C_Gallstone_Classification_FINAL.ipynb)
 - [SIT720_6_2C_Gallstone_Classification_FINAL_Report.pdf](SIT720_6_2C_Gallstone_Classification_FINAL_Report.pdf)
 
-## Execution status
+## Run locally
 
-17 of 17 code cells have stored execution counts. Original notebook outputs are preserved; this publication did not rerun experiments. See the notebook and report for results and limitations.
+```bash
+python -m venv .venv
+# Activate the environment, then:
+python -m pip install jupyter numpy pandas matplotlib scikit-learn ucimlrepo
+jupyter notebook
+```
 
-## Running
+Follow the notebook's local_file and configured download settings for the Gallstone dataset.
 
-Open the notebook in Jupyter or Google Colab and follow its dataset-loading instructions. Install the packages imported in the notebook. Input datasets may require separate download.
+Open the linked notebook and run the cells in order. Package names reflect the source imports; a fresh environment was not tested during this documentation update. Dataset downloads require internet access.
 
-## Scope
+## Limitations and status
 
-Educational experiments; no production or clinical validation is claimed. The uploaded notebooks and reports determine the actual project scope, which may differ from older assessment briefs.
+Small public dataset; model recommendation in the source also refers to test results. Further independent evaluation is needed before treating the recommendation as validated.
+
+The repository preserves saved notebook outputs. Results are from those outputs, not a new execution.
+
+**Author:** Zenith Anthony Dabarera · SIT720 Machine Learning  
+[AI/ML portfolio](https://github.com/Zenith1997)
